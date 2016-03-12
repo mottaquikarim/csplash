@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <meta charset="UTF-8">
+    <title>Introduction to Programming With JavaScript</title>
+
+    <link href='styles/libs/fonts.css' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='styles/semantic.min.css'>
+    <link rel="stylesheet" href="styles/libs/monokai.min.css">
+    <link rel='stylesheet' href='styles/main.css'>
+</head>
+<body id="book">
+    <div class="book-wrap">
+        <div class="book-wrap__inner">
+
+            <div class="book__col">
+                <div class="book__colwrap ui menu inverted vertical">
+                    <div class="item colheader colitem">
+                        <h1 class="title colheader__title">Introduction to Programming With JavaScript</h1>
+                        <br>
+                        <div class="description">An introduction to programming with javascript.</div>
+                        <br>
+                    </div>
+                    <div class="item item__active">
+                        <b class="header"><a href="#notes">Notes</a></b>
+                    </div>
+                    <div class="item item__active">
+                        <b class="header"><a href="#what-is-javascript-">What is JavaScript?</a></b>
+                    </div>
+                    <div class="item item__active">
+                        <b class="header"><a href="#what-can-you-do-with-javascript-">What can you do with Javascript?</a></b>
+                    </div>
+
+                    <div class="item item__active">
+                        <b class="header"><a href="#declaring-a-variable">Declaring a Variable</a></b>
+                    </div>
+
+
+                    <div class="item item__active">
+                        <b class="header"><a href="#booleans">Booleans</a></b>
+                    </div>
+
+                    <div class="item item__active">
+                        <b class="header"><a href="#functions">Functions</a></b>
+                    </div>
+                </div>
+            </div><!-- book__col -->
+
+            <div class="book__content">
+                <div class="main-content js-content" style="padding-bottom: 100px;">
+
+<!-- ### START -->
+<h2 id="introduction-to-programming-with-javascript">Introduction to Programming With JavaScript</h2>
+<h3 id="your-instructors">Your Instructors</h3>
+<p><strong><a href="http://svinci131.github.io/landingpage/">Samantha Vinci</a></strong> |
+<strong><a href="http://taqquikarim.com">Taq Karim</a></strong></p>
+<h3 id="notes">Notes</h3>
+<p>Please open these links in new tabs in your browser. For best results, you'll need <a href="https://www.google.com/chrome/browser/desktop/index.html">Google Chrome</a>.</p>
+<h4 id="-view-class-notes-http-samantha-fewd-us-broadcast-svinci131-intro_to_programming_notes-"><a href="http://samantha.fewd.us/#/broadcast/Svinci131/Intro_To_Programming_Notes">View Class Notes</a></h4>
+<h4 id="-copy-class-notes-http-samantha-fewd-us-fork-svinci131-intro_to_programming_notes-"><a href="http://samantha.fewd.us/#/fork/Svinci131/Intro_To_Programming_Notes">Copy Class Notes</a></h4>
+
+<br />
+
+<h4 id="-paint-app-http-samantha-fewd-us-fork-svinci131-intro_to_programming-">Paint App</h4>
+<p>This is what we will be building today; a Paint clone using purely web technologies.</p>
+<h4><a href="http://samantha.fewd.us/#/fork/mottaquikarim/Intro_to_Programming">Copy Paint App</a></h4>
+<br />
+<br />
+
+<iframe src="http://samantha.fewd.us/#/broadcast/Svinci131/Intro_to_Programming"></iframe>
+
+<h2 id="javascript">JavaScript</h2>
+
+
+<p>The focus of this class will be specifically on javascript (sometimes abbreviated as <code>js</code>). We will not focus too much on HTML and CSS since we only have 2 hours (and js is really the most interesting part).</p>
+<h3 id="what-is-javascript-">What is JavaScript?</h3>
+<ol>
+<li>Originally called Mocha, then LiveScript, then renamed to JavaScript</li>
+<li>It's a subclass of ECMAScript, a standardization maintained by Ecma International<ul>
+<li>Basically, Ecma is the Webster's Dictionary of JavaScript</li>
+</ul>
+</li>
+</ol>
+<h3 id="what-can-you-do-with-javascript-">What can you do with Javascript?</h3>
+<p>JavaScript runs in the browser, meaning it is used heavily in user-interaction. In other words, with javascript, you can…</p>
+<h4 id="animate-stuff">Animate stuff</h4>
+<p><br></p>
+<iframe src="http://samantha.fewd.us/#/broadcast/mottaquikarim/Race_Cars"></iframe>
+<h4 id="allow-the-user-to-control-stuff">Allow the user to control stuff</h4>
+<iframe src="http://samantha.fewd.us/#broadcast/mottaquikarim/slideshow"></iframe>
+<h4 id="mess-with-people-s-minds">Mess with people's minds</h4>
+<iframe src="http://samantha.fewd.us/#broadcast/mottaquikarim/wiper"></iframe>
+<ol>
+<li>Load in data dynamically (this is the best one)</li>
+</ol>
+<h3 id="declaring-a-variable">Declaring a Variable</h3>
+<pre><code class="lang-javascript hljs"><span class="hljs-comment">// this is how to declare a variable:</span>
+<span class="hljs-comment">// var [NAME_OF_YOUR_VARIABLE] = [SOME_VALUE_FOR_IT];</span>
+
+<span class="hljs-comment">// for example:</span>
+<span class="hljs-keyword">var</span> myVariableName = <span class="hljs-string">'Hello, Wrold!'</span>;
+</code></pre>
+<h4 id="variable-types">Variable Types</h4>
+<p>A variable type is a way to classify the different kinds of data we can save to a variable. There are exactly 6 types of variables:</p>
+<h5 id="primitives">Primitives</h5>
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>boolean*</li>
+<li>number*</li>
+<li>string*</li>
+</ul>
+<h5 id="non-primitive">Non Primitive</h5>
+<ul>
+<li>Object</li>
+</ul>
+<h4 id="strings">Strings</h4>
+<p>This one is interesting, we use this to represent text. Anything between the quotations (double or single, doesn't matter as long as you are consistent) is treated as a number.</p>
+<p>So...</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">var</span> myName = <span class="hljs-string">'Sam'</span>;
+<span class="hljs-keyword">var</span> gaspThisIsAString = <span class="hljs-string">'105'</span>;
+</code></pre>
+<h5 id="basic-string-properties">Basic String Properties</h5>
+<ul>
+<li>Always in quotes</li>
+<li>The .length property tells us how many characters in string</li>
+</ul>
+<h5 id="useful-string-methods">Useful String Methods</h5>
+<ul>
+<li>.concat</li>
+<li>.slice</li>
+<li>.substr</li>
+<li>.substring</li>
+<li>.toLowerCase</li>
+<li>.toUpperCase</li>
+</ul>
+<h4 id="nums">Nums</h4>
+<p>Numeric values that can be operated upon via the standard rules of arithmetic.</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">var</span> myNumber = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> pi = <span class="hljs-number">3.14159</span>; <span class="hljs-comment">// ...approximately</span>
+</code></pre>
+<ul>
+<li>"+"          Addition</li>
+<li>"-"         Subtraction</li>
+<li>"*"         Multiplication</li>
+<li>"/"         Division</li>
+<li>"%"         Modulus (Remainder)</li>
+</ul>
+<h6 id="example-">Example:</h6>
+<pre><code class="lang-javascript hljs"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span>)<span class="hljs-comment">//3</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span>+<span class="hljs-number">5</span>)<span class="hljs-comment">//8</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">5</span>*<span class="hljs-number">5</span>)<span class="hljs-comment">//25</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span>%<span class="hljs-number">2</span>)<span class="hljs-comment">//0</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span>/<span class="hljs-number">2</span>)<span class="hljs-comment">//5</span>
+</code></pre>
+<h3 id="booleans">Booleans</h3>
+<p>True or false. Basically.</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">var</span> myBooleanValue = <span class="hljs-literal">true</span>; <span class="hljs-comment">// true</span>
+<span class="hljs-keyword">var</span> myBooleanValueThatIsFalse = <span class="hljs-literal">false</span>; <span class="hljs-comment">// false</span>
+<span class="hljs-built_in">console</span>.log( <span class="hljs-keyword">typeof</span> myBooleanValue );
+</code></pre>
+<h6 id="javascript-logical-operators">JavaScript Logical Operators</h6>
+<ul>
+<li>=== </li>
+<li>!==</li>
+<li>&gt;</li>
+<li>&lt;</li>
+<li>&lt;=</li>
+<li>&amp;&amp;</li>
+<li>||</li>
+<li>!</li>
+</ul>
+<pre><code class="lang-javascript hljs"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span> === <span class="hljs-number">0</span>)<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span> &gt; <span class="hljs-number">0</span>)<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span>*<span class="hljs-number">3</span> === <span class="hljs-number">9</span>)<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">9</span>%<span class="hljs-number">3</span> === <span class="hljs-number">0</span>)<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">9</span>/<span class="hljs-number">3</span> === <span class="hljs-number">0</span>)<span class="hljs-comment">//false</span>
+</code></pre>
+<h3 id="the-conditional-block">The conditional block</h3>
+<ul>
+<li>the if statement</li>
+<li>the if/else statement</li>
+<li>the if/else if/else statement</li>
+</ul>
+<h6 id="example-">Example:</h6>
+<pre><code class="lang-javascript hljs"><span class="hljs-comment">//This is a basic if/else statement</span>
+<span class="hljs-keyword">var</span> score = <span class="hljs-number">80</span>; 
+<span class="hljs-keyword">var</span> grade;
+
+<span class="hljs-keyword">if</span> ( score &lt; <span class="hljs-number">50</span> ) {
+    grade = <span class="hljs-string">"Fail"</span>;
+}
+
+<span class="hljs-keyword">else</span> {
+    grade = <span class="hljs-string">"Pass"</span>;
+}
+</code></pre>
+<pre><code class="lang-javascript hljs"><span class="hljs-comment">//this code added a third option so, we'll add an else if statement</span>
+<span class="hljs-keyword">var</span> score = <span class="hljs-number">80</span>; 
+<span class="hljs-keyword">var</span> grade;
+<span class="hljs-keyword">var</span> incomplete = <span class="hljs-literal">false</span>; 
+
+<span class="hljs-keyword">if</span> ( score &lt; <span class="hljs-number">50</span> ) {
+    grade = <span class="hljs-string">"Fail"</span>;
+}
+<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (incomplete === <span class="hljs-literal">true</span>) {
+    grade = <span class="hljs-string">"Incomplete"</span>;
+}
+<span class="hljs-keyword">else</span> {
+    grade = <span class="hljs-string">"Pass"</span>;
+}
+
+<span class="hljs-built_in">console</span>.log(grade);
+</code></pre>
+<h3 id="functions">Functions</h3>
+<p>What are functions? Functions are essentially actions. We use functions to save a set of instructions that we can tell javascript to use over and over again. Functions have names, just like variables, but they hold more than just primitive values.</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-comment">//This is a function declaration.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span>(<span class="hljs-params"></span>) </span>{ 
+       alert(<span class="hljs-string">'doing something!'</span>);
+ }
+</code></pre>
+<p> Here is how we would call that function </p>
+<pre><code class="lang-javascript hljs"><span class="hljs-comment">//declaring my function</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span>(<span class="hljs-params"></span>) </span>{ 
+       alert(<span class="hljs-string">'doing something!'</span>);
+ } 
+<span class="hljs-comment">// calling it now</span>
+ doSomething();
+</code></pre>
+<!-- ### END -->
+<h3>
+    <a href="#topic-breakdown">Back to top</a>
+</h3>
+
+<div class="ui container stackable grid main-content" style="margin-top:50px;" id="footer">
+    <div class="one column row">
+        <div class="column" style="font-size:16px;text-align: center;">
+            <div class="description">
+                <span>Content written by </span>
+                <strong>
+                    <a href="https://twitter.com/SamanthaVinci" target="_blank">Samantha Vinci</a>
+                </strong>
+                <br />
+                <br />
+                <span>Interface built by your boy</span>
+                <strong>
+                    <a href="https://twitter.com/the_taqquikarim" target="_blank">Taq Karim</a>
+                </strong>
+                <span>with</span>
+                <strong>
+                    <a href="https://highlightjs.org/" target="_blank">highlight.js</a>,
+                </strong>
+                <strong>pushups</strong>,
+                <strong>
+                    <a href="https://mottaquikarim.github.io/eggers" target="_blank">Eggers</a>,
+                </strong>
+                <strong>
+                    <a href="http://gitbot.co" target="_blank">GitBot</a>,
+                </strong>
+                <strong>
+                    <a href="https://open.spotify.com/track/4h95OrjKWYzVIai1EkvZbt" target="_blank">Stromae</a>,
+                </strong>
+                <span>and a</span>
+                <strong>can of redbull</strong>.
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div><!-- book__content -->
+        </div>
+    </div>
+
+    <script src='/javascript/libs/jquery.min.js'></script>
+    <script src="javascript/libs/highlight.min.js"></script>
+    <script src="/javascript/libs/marked.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</body>
+</html>
